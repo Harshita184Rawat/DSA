@@ -29,10 +29,8 @@ void main()
         case 3: display();
                 break;
         default: printf("invalid input\n");
-
     }
-
-
+    
     }
     getch();
 }
@@ -47,7 +45,6 @@ void push()
         scanf("%d",&stack[top]);
         printf("%d has been pushed to the stack\n",stack[top]);
     }
-
 }
 void pop()
 {
@@ -55,12 +52,9 @@ void pop()
     top--;
     if(top==-1)
         printf("Stack is empty");
-
-
 }
 void display()
 {
-
     int i;
     printf(" STACK\n");
     for(i=top;i>=0;i--)
