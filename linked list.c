@@ -31,7 +31,7 @@ void main()
         case 3:display();
                 break;
         case 4:printf("---EXIT----\n!! BYE BYE !!\n");
-        default: printf("Invalid operation\n");
+        default: printf("Invalid operation.\n");
         }
     }
     
@@ -41,7 +41,7 @@ void insert()
     struct node *p=NULL;
     struct node *pt=NULL;
     p=(struct node*)malloc(sizeof(struct node));
-    printf("Enter the value to be inserted");
+    printf("Enter the value to be inserted: ");
     scanf("%d",&p->info);
     if(start==NULL)
     {
@@ -50,7 +50,7 @@ void insert()
     else
     {
         int pos=0;
-        printf("Enter the position");
+        printf("Enter the position\n");
         scanf("%d",&pos);
         if(pos==1)
         {
@@ -64,7 +64,7 @@ void insert()
             pt=pt->next;
             if(pt==NULL)
             {
-                printf("value of that position can't inserted");
+                printf("value of that position can't inserted\n");
                 free(p);
             }
             else
@@ -81,11 +81,11 @@ void del()
     struct node *p=NULL;
     struct node *pt=NULL;
     if(start==NULL)
-        printf("Underflow List id empty");
+        printf("Underflow List is empty\n");
     else
     {
         int pos=0, i=0;
-        printf("Enter the position of element to be deleted");
+        printf("Enter the position of element to be deleted: ");
         scanf("%d",&pos);
         if(pos==1)
             {
@@ -106,7 +106,7 @@ void del()
             }
             
             if(pt==NULL)
-                printf("Invalid value");
+                printf("Invalid value \n");
             else
             {
                 p->next=pt->next;
@@ -120,9 +120,8 @@ void del()
 void display()
 {
     struct node *p=start;
-    int i=0;
     if(start==NULL)
-        printf("Empty List");
+        printf("Empty List \n ");
     else
     {
         while(p!=NULL)
