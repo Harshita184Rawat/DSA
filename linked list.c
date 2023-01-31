@@ -8,7 +8,7 @@ struct node
 };
 struct node *start=NULL;
 void insert();
-void delete();
+void del();
 void display();
 void main()
 {
@@ -26,7 +26,7 @@ void main()
         {
         case 1:insert();
                 break;
-        case 2:delete();
+        case 2:del();
                 break;
         case 3:display();
                 break;
